@@ -1,16 +1,19 @@
-import './Expense.css'
+import moment from 'moment';
 
-const ExpenseItem = () => {
+
+const ExpenseItem = (props) => {
     return (
-        <div className="expense_item_strip">
-            <div className='expense_item_date'>
-                <span>Auguest</span>
-                <span>2023</span>
-                <span className='expense_item_date_day'>25</span>
-            </div>
-            <div className='expense_item_title'>Shopping</div>
-            <div className='expense_item_amount'>$100</div>
-        </div>    
+        <>
+            <div className="expense_item_strip radius_10 padding_10 boarder_white">
+                <div className='expense_item_date boarder_white radius_10'>
+                    <span> { moment(new Date(props.expense.date)).format('MMMM') } </span>
+                    <span>{ moment(new Date(props.expense.date)).format('DD') }</span>
+                    <span className='expense_item_date_day'>{ moment(new Date(props.expense.date)).format('YYYY') }</span>
+                </div>
+                <div className='expense_item_title'> Expense For : {props.expense.title}</div>
+                <div className='expense_item_amount boarder_white radius_10 padding_10'>{props.expense.amount}</div>
+            </div>  
+     </>
     )
 }
 

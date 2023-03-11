@@ -1,7 +1,12 @@
+
+.radius_5 {border-radius: 5px;}
+.radius_10{border-radius: 10px;}
+.boarder_white{border: 1px solid white;}
+.padding_10{padding: 10px;}
+
+
 .expense_item_strip {
     background-color: #8E84A3;
-    padding: 10px;
-    border-radius: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,8 +17,6 @@
 .expense_item_date {
     width: 64px;
     height: 64px;
-    border: 2px solid white;
-    border-radius: 5px;
     padding: 5px;
     background-color: #140F1E;
     align-items: center;
@@ -30,17 +33,39 @@
 
 .expense_item_amount {
     width: 80px;
-    border: 2px solid white;
-    padding: 10px;
     background-color: #9400d3;
-    border-radius: 10px;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
 
 }
 
-.expense_item_date_day {
-    font-weight: bold;
-    font-size: 20px;
+.expense_item_date_day {font-weight: bold;font-size: 20px;}
+
+.expense_add_expense {
+    background-color: #9400d3;
+    border-radius: 10px;
+    padding: 10px;
+
+    
 }
+
+.expense_add_expense input {
+    line-height: 24px;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 200px;
+    padding: 5px;
+}
+
+.expense_add_expense button {
+    line-height: 24px;
+    padding: 5px 10px;
+    background-color: #140F1E;
+    color:white;
+    border-radius: 5px;
+    width: 100px;
+}
+
