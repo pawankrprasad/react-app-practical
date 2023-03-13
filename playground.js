@@ -1,3 +1,49 @@
+function mainFunction(){
+
+    const student = {
+        name:"xyz",
+        class:"10th",
+        address:"delhi"
+    };
+    
+    <add  student= {...student} />
+
+    add(student);
+    mul(student)
+
+}
+
+
+
+function add(props){
+    console.log(props.address)
+}
+
+function mul(props){
+    console.log(props.class)
+}
+
+mainFunction();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const moment = require('moment');
 
 
@@ -16,6 +62,6 @@ const moment = require('moment');
 
 // console.log(result);
 
-console.log(moment( new Date("03/08/2023")).format('YYYY'))
-console.log(moment(new Date("03/08/2023")).format('MMMM'))
-console.log(moment(new Date("03/08/2023")).format("DD"))
+// console.log(moment( new Date("03/08/2023")).format('YYYY'))
+// console.log(moment(new Date("03/08/2023")).format('MMMM'))
+// console.log(moment(new Date("03/08/2023")).format("DD"))
