@@ -1,29 +1,52 @@
-function mainFunction(){
 
-    const student = {
-        name:"xyz",
-        class:"10th",
-        address:"delhi"
-    };
-    
-    <add  student= {...student} />
 
-    add(student);
-    mul(student)
+const a = [1,2,3];
+const b= [6,7,8];
 
+const c = [...a, ...b];
+
+console.log(c);
+
+const student = {
+    name:"xyx",
+    class:"10th",
+    address:"Delhi"
 }
 
-
-
-function add(props){
-    console.log(props.address)
+const student2 = {
+    ...student, name:"stu"
 }
 
-function mul(props){
-    console.log(props.class)
-}
+console.log(student2)
 
-mainFunction();
+
+
+
+// let title = "fdsf";
+
+
+// function setTitle(titleValue){
+
+
+//     title = titleValue;
+//     //update virtual DOme
+//     //re render html page
+// }
+
+
+// setTitle("fasdfsdaf")
+
+
+
+// function add(props){
+//     console.log(props.address)
+// }
+
+// function mul(props){
+//     console.log(props.class)
+// }
+
+// mainFunction();
 
 
 

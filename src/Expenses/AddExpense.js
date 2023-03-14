@@ -2,33 +2,34 @@ import { useState } from "react";
 
 const AddExpense = (props) =>{
 
-    const [title, setTitle ] =   useState("");
-    const [amount, setAmount ] =   useState("");
-    const [date, setDate ] =   useState("");
-
-    const onClickHandler =() => {
+    const defaultExpense = {
+        title:"",
+        amount:"",
+        date:""
     }
-    
-    const handleOnTitleChange = (event)=> {
-        setTitle(event.target.value);
+
+    const [expnese, setExpense] = useState(defaultExpense)
+
+    const onClickHandler =(event) => {
+        event.preventDefault();
+
+        props.onSubmit(expnese);
+        setExpense(defaultExpense)
+
     }
-    
-    const handleOnAmountChange = (event)=> {
-        setAmount(event.target.value);
-    };
-    
-    
-    const handleOnDateChange = (event)=> {
-        setDate(event.target.value);
-    };
 
-
+    const handleInputChange = (event, field) => setExpense({...expnese, [field]: event.target.value })
+    
+    
     return(
         <div className="expense_add_expense">
-          Title <input type="text" onChange={handleOnTitleChange} value={title}></input>
-          Amount <input type="number" onChange={handleOnAmountChange} value={amount}></input>
-          Date <input type="date" onChange={handleOnDateChange} value={date}></input>
-           <button onClick={onClickHandler}>Add</button>
+            <form onSubmit={onClickHandler} >
+            Title <input type="text" onChange={ (e) => handleInputChange(e, 'title')} value={expnese.title}></input>
+            Amount <input type="number" onChange={(e)=> handleInputChange(e, 'amount')} value={expnese.amount}></input>
+            Date <input type="date" onChange={(e)=> handleInputChange(e, 'date')} value={expnese.date}></input>
+            <button type="submit" >Add</button>
+            </form>
+        
         </div>
     )
 }
