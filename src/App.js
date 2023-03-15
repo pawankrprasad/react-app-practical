@@ -1,49 +1,32 @@
 
+import { useState } from 'react';
 import './App.css';
 import Expenses from './Expenses/Expenses';
 
-// function MainFunction(){
-//   const student = {
-//     name:"Student Name",
-//     class:"10th",
-//     address:"Delhi"
-// };
 
+const Counter = () =>{
 
-//   return(
-//     <div>
-//       <h1>Main Function</h1>
-//       <Address {...student}/>
-//       <Name {...student}/>
-//     </div>
-//   )
-// }
+  const [num, setNum] = useState(0);
 
-// function Address(props){
-//   return(
-//     <h1>{props.address}</h1>
-//   )
-// }
+  const handleSyncCounter =()=> {
+     
+    setNum((prevState) => prevState+1)
+  }
 
-// function Name(props){
-//   return(
-//     <h1>{props.name}</h1>
-//   )
-// }
+  const handleAsyncCounter =()=> {
+    setTimeout(()=>{
+      setNum((prevState) => prevState + 1)
+    },5000)
+  }
 
-
-
-
-
-
-
-// const App = () => {
-//   return (  
-//     <div className='main'>
-//       <MainFunction/>
-//      </div>
-//   );
-// }
+  return(
+    <div>
+      <div style={{fontSize:"26px"}}>{num}</div>
+      <button onClick={handleSyncCounter}>Sync</button>
+      <button onClick={handleAsyncCounter}>Async</button>
+    </div>
+  )
+}
 
 
 const App = () => {

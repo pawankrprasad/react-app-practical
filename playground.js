@@ -1,23 +1,45 @@
 
 
-const a = [1,2,3];
-const b= [6,7,8];
+// function fun1(props){
 
-const c = [...a, ...b];
+//     console.log(props.name)
+//     const data = "some data";
+//     props.fun2(data)
+// }
 
-console.log(c);
 
-const student = {
-    name:"xyx",
-    class:"10th",
-    address:"Delhi"
-}
 
-const student2 = {
-    ...student, name:"stu"
-}
+// const emp = {
+//     name:"xyz",
+//     salary: "20000",
+//     fun2: (data)=> console.log(data)
+// }
 
-console.log(student2)
+ 
+// <fun1 {...emp}/>
+
+// fun1(emp)
+
+
+
+// const a = [1,2,3];
+// const b= [6,7,8];
+
+// const c = [...a, ...b];
+
+// console.log(c);
+
+// const student = {
+//     name:"xyx",
+//     class:"10th",
+//     address:"Delhi"
+// }
+
+// const student2 = {
+//     ...student, name:"stu"
+// }
+
+// console.log(student2)
 
 
 
@@ -57,6 +79,48 @@ console.log(student2)
 
 
 
+// function MainFunction(){
+//   const student = {
+//     name:"Student Name",
+//     class:"10th",
+//     address:"Delhi"
+// };
+
+
+//   return(
+//     <div>
+//       <h1>Main Function</h1>
+//       <Address {...student}/>
+//       <Name {...student}/>
+//     </div>
+//   )
+// }
+
+// function Address(props){
+//   return(
+//     <h1>{props.address}</h1>
+//   )
+// }
+
+// function Name(props){
+//   return(
+//     <h1>{props.name}</h1>
+//   )
+// }
+
+
+
+
+
+
+
+// const App = () => {
+//   return (  
+//     <div className='main'>
+//       <MainFunction/>
+//      </div>
+//   );
+// }
 
 
 
@@ -67,7 +131,8 @@ console.log(student2)
 
 
 
-const moment = require('moment');
+
+//const moment = require('moment');
 
 
 // const expenses = [

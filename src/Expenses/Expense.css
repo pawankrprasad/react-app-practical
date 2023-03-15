@@ -14,6 +14,13 @@
     margin: 5px;
 }
 
+.high_expense {
+    background-color: red;
+    opacity: 0.8;
+}
+
+
+
 .expense_item_date {
     width: 64px;
     height: 64px;
@@ -33,7 +40,7 @@
 
 .expense_item_amount {
     width: 80px;
-    background-color: #9400d3;
+    
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -67,5 +74,16 @@
     color:white;
     border-radius: 5px;
     width: 100px;
+    border: none;
 }
 
+.expense_add_expense button:hover {
+    cursor: pointer;
+    background-color: #8E84A3;
+   
+   
+}
+
+
+
+/* background-color: #9400d3; */

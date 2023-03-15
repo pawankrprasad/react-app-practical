@@ -5,17 +5,18 @@ import './Expense.css'
 import { useState } from "react";
 
 
-const Expenses = () =>{
+const NoExpenses = ()=>(<h1>No Expenses</h1>)
 
-   const [expenses, setExpenses] =  useState([])
-   const onNewExpenseAdd = (expense) => setExpenses([...expenses, expense])
+const Expenses = () => {
 
-    return(
+    const [expenses, setExpenses] = useState([])
+    const onNewExpenseAdd = (expense) => setExpenses([...expenses, expense])
+
+    return (
         <>
-        <AddExpense onSubmit = {onNewExpenseAdd} />
-        {expenses.map(item=>{
-            return (<ExpenseItem  expense={item}/>)
-        })}
+            <AddExpense onSubmit={onNewExpenseAdd} />
+            { expenses.length === 0 ? <NoExpenses/> : expenses.map(item => <ExpenseItem expense={item} />) }
+
         </>
 
     )

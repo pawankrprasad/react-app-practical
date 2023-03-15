@@ -13,14 +13,16 @@ const ExpenseDate = ({date}) => {
 }
 
 
-
 const ExpenseItem = ({ expense }) => {
+
+    const bgClass = expense.amount >= 500 ? " high_expense" : "" 
+
     return (
         <>
-            <div className="expense_item_strip radius_10 padding_10 boarder_white">
+            <div className={"expense_item_strip radius_10 padding_10 boarder_white"+  bgClass} >
                 <ExpenseDate date={expense.date}/>
                 <div className='expense_item_title'> {expense.title}</div>
-                <div className='expense_item_amount boarder_white radius_10 padding_10'>${expense.amount}</div>
+                <div className='expense_item_amount boarder_white radius_10 padding_10' style={{backgroundColor: expense.amount > 100 ? "red" : "#9400d3"}}>${expense.amount}</div>
             </div>  
      </>
     )
