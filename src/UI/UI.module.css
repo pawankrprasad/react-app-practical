@@ -1,0 +1,13 @@
+.button {
+    line-height: 24px;
+    padding: 5px 10px;
+    background-color: blue;
+    color:white;
+    border-radius: 5px;
+    width: 100px;
+    border: none;
+}
+
+.primary { background-color: blue;}
+.success { background-color: green;}
+.danger { background-color: red;}

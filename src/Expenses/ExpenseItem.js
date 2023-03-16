@@ -1,7 +1,6 @@
 import moment from 'moment';
 
 
-
 const ExpenseDate = ({date}) => {
     return (
         <div className='expense_item_date boarder_white radius_10'>
@@ -19,7 +18,7 @@ const ExpenseItem = ({ expense }) => {
 
     return (
         <>
-            <div className={"expense_item_strip radius_10 padding_10 boarder_white"+  bgClass} >
+            <div className={`expense_item_strip radius_10 padding_10 boarder_white ${bgClass}`} >
                 <ExpenseDate date={expense.date}/>
                 <div className='expense_item_title'> {expense.title}</div>
                 <div className='expense_item_amount boarder_white radius_10 padding_10' style={{backgroundColor: expense.amount > 100 ? "red" : "#9400d3"}}>${expense.amount}</div>

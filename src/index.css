@@ -14,3 +14,26 @@ body {
   width: 300px;
   height: 300px;
 }
+
+.card {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.card_red { background-color: red}
+.card_green { background-color: green}
+
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}

@@ -1,41 +1,55 @@
 
 import { useState } from 'react';
-import './App.css';
+import AppClasses from './App.module.css';
 import Expenses from './Expenses/Expenses';
+import Button from './UI/Button';
 
 
-const Counter = () =>{
-
-  const [num, setNum] = useState(0);
-
-  const handleSyncCounter =()=> {
-     
-    setNum((prevState) => prevState+1)
-  }
-
-  const handleAsyncCounter =()=> {
-    setTimeout(()=>{
-      setNum((prevState) => prevState + 1)
-    },5000)
-  }
-
+const Box = () => {
   return(
-    <div>
-      <div style={{fontSize:"26px"}}>{num}</div>
-      <button onClick={handleSyncCounter}>Sync</button>
-      <button onClick={handleAsyncCounter}>Async</button>
-    </div>
+    <div className='box'>
+    Box
+  </div>
   )
 }
 
 
-const App = () => {
-    return (  
-      <div className='main'>
-        <Expenses/>
-       </div>
-    );
+
+const Card = (props) => {
+  return(
+  <div className='card'>
+    <div>
+      {props.children}
+    </div>
+    
+  </div>
+)
   }
+
+
+
+
+
+// const App = () => {
+//     return (  
+//       <div className={AppClasses.main}>
+//         <Counter className='card_red' />
+//         <Counter className='card_green' />
+//        </div>
+//     );
+//   }
+
+const App = () => {
+  return (  
+    <div className={AppClasses.main}>
+      <Card>
+        <Button variant="primary" onClick={()=> alert("Add Button Clicked")}> <i>Add</i>  </Button>
+        <Button variant="success" onClick={()=> alert("Save Button Clicked")}>Save</Button>
+        <Button variant="danger" onClick={()=> alert("Delete Button Clicked")}>Delete</Button>
+      </Card>
+      </div>
+  );
+}
   
 
 export default App;
