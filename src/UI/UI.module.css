@@ -11,3 +11,12 @@
 .primary { background-color: blue;}
 .success { background-color: green;}
 .danger { background-color: red;}
+
+.input {
+    line-height: 24px;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+    padding: 5px;
+}

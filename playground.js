@@ -1,4 +1,14 @@
 
+const isTrue = 1;  ///0, undefined, "";
+
+
+const result = isTrue && "Result is 100";
+
+console.log(result);
+
+
+
+
 
 // function fun1(props){
 
